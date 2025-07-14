@@ -1,16 +1,16 @@
 /* eslint-disable prettier/prettier */
 import { Test, TestingModule } from '@nestjs/testing';
-import { PrismaService } from './prisma.service';
+import { AuthService } from './auth.service';
 
-describe('PrismaService', () => {
-  let service: PrismaService;
+describe('AuthService', () => {
+  let service: AuthService;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [PrismaService],
+      providers: [AuthService],
     }).compile();
 
-    service = module.get<PrismaService>(PrismaService);
+    service = module.get<AuthService>(AuthService);
   });
 
   it('should be defined', () => {
@@ -19,4 +19,4 @@ describe('PrismaService', () => {
 });
 
 
-//this is where we write our logics
+//where the logics are written
