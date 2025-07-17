@@ -4,7 +4,7 @@
 import { IsDateString, IsNotEmpty, IsOptional, IsString } from "class-validator";
 
 
-export class DestinaionDto{
+export class DestinationDto{
     @IsNotEmpty()
     @IsString()
     name: string
