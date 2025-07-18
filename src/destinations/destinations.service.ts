@@ -19,6 +19,18 @@ export class DestinationsService {
             }
         })
     }
+
+    async findAll(userId: number){
+        return this.prisma.destination.findMany({
+            where: {userId},
+        })
+    }
+
+    async findOne(userId: number, id: number){
+        return this.prisma.destination.findFirst({
+            where: {id, userId},
+        })
+    }
 }
 
 
