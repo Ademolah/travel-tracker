@@ -31,7 +31,7 @@ export class DestinationsController {
 
     @Delete('/:id')
     async deleteOne(@Request() req,  @Param('id') id: string){
-        return this.destinationService.delete(req.user.userId ,+id)
+        return this.destinationService.removeDestination(req.user.userId ,+id)
     }
 
     @Patch('/:id')

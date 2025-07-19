@@ -39,7 +39,7 @@ export class DestinationsService {
         return destination
     }
 
-    async delete(userId: number, id: number){
+    async removeDestination(userId: number, id: number){
         await this.findOne(userId, id)
 
         return this.prisma.destination.delete({
